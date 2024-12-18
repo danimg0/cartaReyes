@@ -28,5 +28,7 @@ public class MainActivity extends AppCompatActivity {
         regalo2 = findViewById(R.id.edItem2);
         regalo3 = findViewById(R.id.edItem3);
         regalo4 = findViewById(R.id.edItem4);
+
+        //Cuando se pulsa el boton
     }
 }

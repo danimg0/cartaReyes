@@ -6,12 +6,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
+
+import com.google.android.material.carousel.CarouselLayoutManager;
+import com.google.android.material.carousel.CarouselSnapHelper;
+import com.google.android.material.carousel.HeroCarouselStrategy;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
+    private ArrayList<Integer> images = new ArrayList<>(
+            List.of(
+                    R.drawable.melchor,
+                    R.drawable.gaspar,
+                    R.drawable.baltasar
+            )
+    );
 
     EditText nombre;
     EditText regalo1;
@@ -22,7 +42,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        RecyclerView recyclerView = findViewById(R.id.carousel_recycler_view);
+        recyclerView.setAdapter(new CarouselAdapter(images));
+        recyclerView.setLayoutManager(new CarouselLayoutManager(new HeroCarouselStrategy()));
+        CarouselSnapHelper snapHelper = new CarouselSnapHelper();
+        snapHelper.attachToRecyclerView(recyclerView);
 
         nombre = findViewById(R.id.edNombre);
         regalo1 = findViewById(R.id.edItem1);

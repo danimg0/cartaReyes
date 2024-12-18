@@ -23,6 +23,7 @@ import java.util.List;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity { //  implements CarouselAdapter.OnItemClickListener
     private ArrayList<Integer> images = new ArrayList<>(
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity { //  implements CarouselAda
             )
     );
 
-    EditText nombre;
+    TextInputEditText nombre;
     EditText regalo1;
     EditText regalo2;
     EditText regalo3;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity { //  implements CarouselAda
         CarouselSnapHelper snapHelper = new CarouselSnapHelper();
         snapHelper.attachToRecyclerView(recyclerView);
 
-        nombre = findViewById(R.id.edNombre);
+        nombre = findViewById(R.id.name);
         regalo1 = findViewById(R.id.edItem1);
         regalo2 = findViewById(R.id.edItem2);
         regalo3 = findViewById(R.id.edItem3);

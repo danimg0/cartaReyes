@@ -41,6 +41,7 @@
         android:layout_height="225dp"
         android:clipChildren="false"
         android:clipToPadding="false"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/toolbar"/>
     <TextView
         android:id="@+id/tvCarta"
@@ -57,25 +58,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.4"
         android:layout_marginBottom="30sp"/>
-
-    <TextView
-        android:id="@+id/tvNombre"
-        android:layout_width="151dp"
-        android:layout_height="46dp"
-        android:text="Tu nombre: "
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvCarta" />
-
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edNombre"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:hint="nombre..."
-        app:layout_constraintStart_toEndOf="@id/tvNombre"
-        app:layout_constraintTop_toBottomOf="@id/tvCarta" />
+        android:hint="Tu nombre"
+        app:endIconMode="clear_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCarta">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextView and EditText for item 1 -->
     <TextView

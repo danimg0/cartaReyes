@@ -34,11 +34,15 @@ public class CarouselAdapter extends RecyclerView.Adapter<CarouselAdapter.Image>
         return images.size();
     }
 
+
+
     public static class Image extends RecyclerView.ViewHolder {
         private ImageView image;
         public Image(@NonNull View itemView) {
             super(itemView);
             this.image = itemView.findViewById(R.id.carousel_image_view);
+
         }
+
     }
 }

@@ -16,6 +16,12 @@ public class ResumenCarta extends AppCompatActivity {
         String regalo2 = getIntent().getStringExtra("regalo2");
         String regalo3 = getIntent().getStringExtra("regalo3");
         String regalo4 = getIntent().getStringExtra("regalo4");
+        int selectedImage = getIntent().getIntExtra("selectedImage", -1);
+
+        //Mostrar imagen
+        //if (selectedImage != -1) {
+       //     findViewById(R.id.image_view).setBackgroundResource(selectedImage);
+       // }
 
         TextView tvResumen = findViewById(R.id.text_resumen);
         tvResumen.setText("Querido " + nombre + ",\n\n" +

@@ -24,7 +24,7 @@ import java.util.List;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity { //  implements CarouselAdapter.OnItemClickListener
     private ArrayList<Integer> images = new ArrayList<>(
             List.of(
                     R.drawable.melchor,
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     EditText regalo2;
     EditText regalo3;
     EditText regalo4;
+    //private int selectedImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
                 resumenCarta.putExtra("regalo2", regalo2.getText().toString());
                 resumenCarta.putExtra("regalo3", regalo3.getText().toString());
                 resumenCarta.putExtra("regalo4", regalo4.getText().toString());
+                //resumenCarta.putExtra("selectedImage", selectedImage);
+
                 startActivity(resumenCarta);
             }
         });

@@ -5,7 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#D1FBD3"
+    tools:context=".MainActivity"
+    >
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floating_action_button"
@@ -20,3 +22,142 @@
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        app:title="Carta a los reyes magos"
+        app:titleTextColor="#FF0000"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:background="#00FF00"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCarta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Mi carta"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/merry_first"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        android:layout_marginBottom="30sp"/>
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="151dp"
+        android:layout_height="46dp"
+        android:text="Tu nombre: "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCarta" />
+
+    <EditText
+        android:id="@+id/edNombre"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:hint="nombre..."
+        app:layout_constraintStart_toEndOf="@id/tvNombre"
+        app:layout_constraintTop_toBottomOf="@id/tvCarta" />
+
+    <!-- TextView and EditText for item 1 -->
+    <TextView
+        android:id="@+id/tvItem1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edNombre"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/edItem1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Cosa 1..."
+        app:layout_constraintStart_toEndOf="@id/tvItem1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edNombre"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView and EditText for item 2 -->
+    <TextView
+        android:id="@+id/tvItem2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edItem1"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/edItem2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Cosa 2..."
+        app:layout_constraintStart_toEndOf="@id/tvItem2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edItem1"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView and EditText for item 3 -->
+    <TextView
+        android:id="@+id/tvItem3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edItem2"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/edItem3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Cosa 3..."
+        app:layout_constraintStart_toEndOf="@id/tvItem3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edItem2"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView and EditText for item 4 -->
+    <TextView
+        android:id="@+id/tvItem4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edItem3"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/edItem4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Cosa 4..."
+        app:layout_constraintStart_toEndOf="@id/tvItem4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edItem3"
+        android:layout_marginTop="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

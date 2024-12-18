@@ -1,6 +1,7 @@
 package com.example.cartareyesmagos;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,8 @@ public class ResumenCarta extends AppCompatActivity {
                 "3. " + regalo3 + "\n" +
                 "4. " + regalo4 + "\n\n" +
                 "¡Esperamos que te gusten mucho!");
+
+        tvResumen.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
     }
 }
 
